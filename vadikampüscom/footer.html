@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Sitem</title>
+    <style>
+        /* Footer Stilleri */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 30px 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 20px;
+            padding: 0 15px;
+        }
+        
+        .footer-section h3 {
+            color: #f8f8f8;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section ul li a:hover {
+            color: #fff;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            margin-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 14px;
+        }
+        
+        .social-icons a {
+            color: white;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .footer-section {
+                flex: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sayfa içeriği buraya gelecek -->
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Hakkımızda</h3>
+                <p>Web sitemiz hakkında kısa bir açıklama. Misyonumuz ve vizyonumuz burada yer alabilir.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Hızlı Linkler</h3>
+                <ul>
+                    <li><a href="#">Ana Sayfa</a></li>
+                    <li><a href="#">Hakkımızda</a></li>
+                    <li><a href="#">Hizmetler</a></li>
+                    <li><a href="#">İletişim</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>İletişim</h3>
+                <ul>
+                    <li>Adres: Örnek Mah. 123. Sokak No:1 İstanbul</li>
+                    <li>Telefon: 0123 456 78 90</li>
+                    <li>Email: info@sitem.com</li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Sosyal Medya</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 Web Sitem. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+    
+    <!-- Font Awesome ikonları için (isteğe bağlı) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

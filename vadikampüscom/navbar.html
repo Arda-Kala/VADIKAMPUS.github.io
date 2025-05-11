@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="AtlasVadi, Atlas Üniversitesi, VadiForum, VADİKAMPUS, Vadikampüs, Kampüsvadi">
+  <meta name="description"
+    content="Atlas Üniversitesi öğrencileri VADİKAMPUS'te buluşuyor. Haberler, duyurular, ilanlar ve soru-cevap VADİKAMPUS öğrenci platformunda yer alıyor.">
+  <title>VADİKAMPUS</title>
+  <!--Bootstrap Linki-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!--Font Avesome Linki-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+    }
+
+    .img1 {
+      height: 40px;
+    }
+
+
+
+    .col:hover {
+      -ms-transform: scale(1.05);
+      /* IE 9 */
+      -webkit-transform: scale(1.05);
+      /* Safari 3-8 */
+      transform: scale(1.05);
+      transition: all 0.3s;
+
+    }
+
+    nav {
+      background: white;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    li a {
+      border-radius: 5px;
+    }
+
+    li a:hover {
+      color:#00558C;
+      background: #f1f5f9;
+      transition: 0.5s;
+    }
+
+    li a:active {
+      color:#00558C;
+      background: #f1f5f9;
+    }
+
+    nav a {
+
+      color: #1e293b;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      border-radius: 6px;
+      transition: all 0.2s;
+
+    }
+
+    nav div a.active {
+      color: #00558C;
+      font-weight: 600;
+    }
+
+    .navbar-nav {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    li a i {
+      margin-right: 4px;
+    }
+
+    ul li {
+      margin-left: 15px;
+    }
+
+    ul li a {
+
+      padding-right: 21px;
+    }
+
+    .navbarokalt {
+
+      margin-right: 11px
+    }
+    footer {
+            display: block;
+            background-color: #00558C;
+            color: white;
+            text-align: center;
+            padding: 15px ;
+            font-family: Arial, sans-serif;
+            width: 100%;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        
+  </style>
+</head>
+
+<body>
+    <!--Burası Navbar başlangıcıdır-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container-fluid">
+      <a style="font-family: 'Arial Black', sans-serif; font-size: 20px; color: #000000; background: transparent;"
+        class="navbar-brand" href="anasayfa.html"><img class="img1"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOqiSkb7noblUkly2S2sGRx7VzB239Muc6A30WUkwAxfDzoyHkkNW3x72Puipfypq57fc&usqp=CAU"
+          alt="Logo"> VADİKAMPUS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0"> <!-- mx-auto eklendi -->
+          <li><a style="color: #00558C;" href="anasayfa.html" class="nav-link active" data-section="home"><i
+                class="fas fa-home"></i> Anasayfa</a></li>
+          <li class="nav-item">
+            <a data-section="news" href="haberler.html"><i class="fas fa-newspaper"></i> Haberler</a>
+          </li>
+          <li class="nav-item">
+            <a href="takvim.html"><i class="fas fa-calendar-alt"></i> Takvim</a>
+          </li>
+          <!--Ders Navbarı-->
+          <li class="nav-item dropdown">
+            <a href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i
+                class="fas fa-book"></i>
+              Ders<i class="fas fa-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="navbarokalt" href="duyurular.html"><i class="fas fa-bullhorn"></i> Duyurular</a></li>
+              <li><a class="navbarokalt" href="materyaller.html"><i class="fas fa-file-alt"></i>Materyaller</a></li>
+              <li>
+
+            </ul>
+          </li>
+          <!--İlanlar Navbarı-->
+          <li class="nav-item dropdown">
+            <a href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-briefcase"></i> İlanlar<i class="fas fa-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="navbarokalt" href="ilan_staj.html"><i class="fas fa-user-graduate"></i>Staj</a></li>
+              <li><a class="navbarokalt" href="ilan_ev.html"><i class="fas fa-home"></i>Ev</a></li>
+              <li><a class="navbarokalt" href="ilan_is.html"><i class="fas fa-building"></i>İş</a></li>
+            </ul>
+          </li>
+          <!--Yeni Atlaslılar Navbarı-->
+          <li class="nav-item">
+            <a href="yeniatlaslılar.html"><i class="fas fa-user-plus"></i> YeniAtlaslılar</a>
+          </li>
+          <!--Ekle Navbarı-->
+          <li class="nav-item dropdown">
+            <a href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+              <i class="fas fa-plus"></i>Ekle<i class="fas fa-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="navbarokalt" href="ekle_staj.html"><i class="fas fa-user-graduate"></i>Staj İlanı Ekle</a></li>
+              <li><a class="navbarokalt" href="ekle_ev.html"><i class="fas fa-home"></i>Ev İlanı Ekle</a></li>
+              <li><a class="navbarokalt" href="ekle_is.html"><i class="fas fa-building"></i>İş İlanı Ekle</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <!--Profil Navbarı sağa alınsın diye ms-auto eklendi-->
+        <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+          <li class="nav-item dropdown">
+            <a href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-user"></i> Profil<i class="fas fa-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="navbarokalt" class="dropdown-item" href="giris.html"><i class="fas fa-sign-in-alt"></i>Giriş Yap</a>
+              </li>
+              <li><a class="navbarokalt" class="dropdown-item" href="uye.html"><i class="fas fa-user-plus"></i> Üye Ol</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    
+
+
+
+</div>
+
+
+    <!--Bootstrap Linkleri-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"></script>
+
+      <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="AtlasVadi, Atlas Üniversitesi, VadiForum, VADİKAMPUS, Vadikampüs, Kampüsvadi">
+  <meta name="description"
+    content="Atlas Üniversitesi öğrencileri VADİKAMPUS'te buluşuyor. Haberler, duyurular, ilanlar ve soru-cevap VADİKAMPUS öğrenci platformunda yer alıyor.">
+  <title>VADİKAMPUS</title>
+  <!--Bootstrap Linki-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!--Font Avesome Linki-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <!--W3schools Linki-->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <!--Slider için Link-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      cursor: url(imlec1-Photoroom\ \(1\).png), auto;
+
+    }
+
+ 
+
+    /*Slider İçin*/
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #eaeaea;
+    overflow: hidden;
+}
+
+
+
+.container .slide .item{
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 20px;
+    box-shadow: 0 30px 50px #505050;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.slide .item:nth-child(1),
+.slide .item:nth-child(2){
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.slide .item:nth-child(3){
+    left: 50%;
+}
+.slide .item:nth-child(4){
+    left: calc(50% + 220px);
+}
+.slide .item:nth-child(5){
+    left: calc(50% + 440px);
+}
+
+/* here n = 0, 1, 2, 3,... */
+.slide .item:nth-child(n + 6){
+    left: calc(50% + 660px);
+    opacity: 0;
+}
+
+
+
+.item .content{
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    width: 300px;
+    text-align: left;
+    color: #eee;
+    transform: translate(0, -50%);
+    font-family: system-ui;
+    display: none;
+}
+
+
+.slide .item:nth-child(2) .content{
+    display: block;
+}
+
+
+.content .name{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    animation: animate 1s ease-in-out 1 forwards;
+}
+
+.content .des{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+.content button{
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+
+@keyframes animate {
+    from{
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+
+
+.button{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+}
+
+.button button{
+    width: 40px;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    border: 1px solid #000;
+    transition: 0.3s;
+}
+
+.button button:hover{
+    background: #ababab;
+    color: #fff;
+}
+
+nav.navbar {
+  
+    position: fixed; /* Navbar'ı sabitle */
+    width: 100%;
+    z-index: 1000; /* Diğer elementlerin üstünde görünmesini sağla */
+    transition: background-color 0.3s ease; /* Renk geçiş efekti */
+}
+/* Slider'ı tam ekran yap */
+.container {
+    width: 100% !important;
+    height: 100vh !important;
+    max-width: none !important;
+    box-shadow: none !important;
+    position: relative;
+    margin-top: 0;
+}
+
+/* Slider item'larını düzenle */
+.slide .item {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Diğer slider item'larını gizle */
+.slide .item:not(:nth-child(1)):not(:nth-child(2)) {
+    display: none;
+}
+  </style>
+</head>
+
+<body>
+  <div id="navbar"></div>
+ 
+  
+  <div class="container" >
+
+      <div class="slide">
+
+          
+          <div class="item" style="background-image: url(https://kutuphane.atlas.edu.tr/uploads/sayfalar/cerez-politikasi-33891.jpg);">
+              <div class="content">
+                  <div class="name">ŞİMDİ ÜYE OL</div>
+                  
+                  <a href="uye.html"><button>Üye Ol</button></a>
+              </div>
+          </div>
+          <div class="item" style="background-image: url(https://a-static.besthdwallpaper.com/magical-butterfly-wallpaper-3840x2160-11259_54.jpg);">
+              <div class="content">
+                  <div class="name">VADİKAMPUS'E HOŞGELDİN</div>
+                  <div class="des">Atlas Üniversitesi öğrencileri tarafından kurulmuş, üniversite öğrencilerinin duygu ve düşüncelerini paylaşabildiği,
+                    iş imkanı oluşturabildiği ve daha birçok alanda öğrenci yararına olabileceklerin en iyisini hedeflemiş, her kullanıcının içerik yazabildiği
+                    Atlas Üniversitesi ile resmi bir bağı olmayan bir internet sitesidir. VADIKAMPUS 14.05.2025 tarihinde kullanıma açılmıştır.</div>
+                 <a href="giris.html"><button>Daha Fazla</button></a>
+              </div>
+          </div>
+          <div class="item" style="background-image: url(https://files.fairu.app/9b9a01b1-c917-4f86-9c8a-2cd0024e8bda/istock-1445362736.jpg?width=2560&quality=75);">
+              <div class="content">
+                  <div class="name">VADİ'DE HABERLER</div>
+                  <div class="des">Üniversitedeki son haberlere ışık hızında ulaşın.</div>
+                  <a href="haberler.html"><button>Daha Fazla</button></a>
+              </div>
+          </div>
+          <div class="item" style="background-image: url(https://wallpapers4screen.com/Uploads/26-11-2022/52980/june-2023-calendar-4k-workplace-business-desk-calendar-june.jpg);">
+              <div class="content">
+                  <div class="name">AKADEMİK TAKVİMİ İNCELEYİN</div>
+                  <div class="des">Üniversitenin Önlisans-Lisans 2024-2025 yılı Akademik Takvimini inceleyin.</div>
+                  <a href="takvim.html"><button>Daha Fazla</button></a>
+              </div>
+          </div>
+          <div class="item" style="background-image: url(https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGJvb2t8ZW58MHx8MHx8fDA%3D);">
+              <div class="content">
+                  <div class="name">DERS MATERYALLERİ</div>
+                  <div class="des">Okuduğunuz bölüme göre istediğiniz ders hakkında ders notlarına ve çıkmış sorulara ulaşın.</div>
+                  <a href="materyaller.html"><button>Daha Fazla</button></a>
+              </div>
+          </div>
+          <div class="item" style="background-image: url(https://wallpaperaccess.com/full/656693.jpg);">
+              <div class="content">
+                  <div class="name">STAJ-EV-İŞ İLANLARI</div>
+                  <div class="des"></div>
+                 <a href="ilan_ev.html"><button>Daha Fazla</button></a>
+              </div>
+              <div class="item" style="background-image: url(https://www.atlas.edu.tr/wp-content/uploads/2024/02/dormitories.jpg);">
+                <div class="content">
+                    <div class="name">YENİ ATLASLILAR</div>
+                    <div class="des">Üniversitemize yeni katılan öğrenciler için tavsiyelere göz at.</div>
+                    <a href="yeniatlaslılar.html"><button>Daha Fazla</button></a>
+                </div>
+
+          </div>
+
+      </div>
+
+      <div class="button">
+          <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+          <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+
+  </div>
+
+  <script>
+    let next = document.querySelector(".next");
+let prev = document.querySelector(".prev");
+
+next.addEventListener("click", function () {
+  let items = document.querySelectorAll(".item");
+  document.querySelector(".slide").appendChild(items[0]);
+});
+
+prev.addEventListener("click", function () {
+  let items = document.querySelectorAll(".item");
+  document.querySelector(".slide").prepend(items[items.length - 1]); // here the length of items = 6
+});
+
+  </script>
+
+
+
+  <!--Bootstrap Linkleri-->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>
