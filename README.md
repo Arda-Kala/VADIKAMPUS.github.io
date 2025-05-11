@@ -3,7 +3,8 @@ Web Tabanlı Programlama Projesi – [VADIKAMPUS]
 Bu proje, [İstanbul Atlas Üniversitesi/Mühendislik ve Doğa Bilimleri] bünyesinde yürütülen **[Web Tabanlı Programlama]** dersi kapsamında hazırlanmış bir proje ödev çalışmasıdır.
 
 ## 📌 Amaç
-Bu ödevin amacı, [ödevde ne amaçlandığını birkaç cümle ile yaz: örneğin veri yapıları kullanılarak bir uygulama geliştirmek, belirli bir algoritmayı analiz etmek vb.].
+Bu ödevin amacı, [Web teknolojileri (HTML, CSS, JavaScript ve/veya backend dilleri) bilgilerini uygulayarak
+bir web uygulaması geliştirmek].
 
 ## 🛠️ Kullanılan Teknolojiler
 - Programlama Dili: [Html,CSS, JS]
